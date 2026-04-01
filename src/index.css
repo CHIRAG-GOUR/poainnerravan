@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+@import "tailwindcss";
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+}
+
+html, body, #root {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent !important;
+  font-family: 'Outfit', sans-serif;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+@keyframes suffer {
+  0% { transform: translate(0, 0) scale(1); filter: drop-shadow(0 0 0 red) brightness(1); }
+  25% { transform: translate(-10px, 10px) scale(0.95); filter: drop-shadow(0 0 30px red) brightness(1.5); }
+  50% { transform: translate(10px, -10px) scale(1.05); filter: drop-shadow(0 0 50px red) brightness(2); }
+  75% { transform: translate(-10px, -10px) scale(0.95); filter: drop-shadow(0 0 30px red) brightness(1.5); }
+  100% { transform: translate(0, 0) scale(1); filter: drop-shadow(0 0 0 red) brightness(1); }
+}
+.suffer-animation {
+  animation: suffer 0.5s ease-in-out;
+}
+
+@keyframes deflect {
+  0% { filter: drop-shadow(0 0 0 cyan); }
+  50% { filter: drop-shadow(0 0 40px cyan) brightness(1.3); transform: scale(1.02); }
+  100% { filter: drop-shadow(0 0 0 cyan); transform: scale(1); }
+}
+.deflect-animation {
+  animation: deflect 0.5s ease-out;
+}
